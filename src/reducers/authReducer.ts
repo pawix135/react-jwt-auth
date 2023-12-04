@@ -14,6 +14,14 @@ export const authReducer: React.Reducer<AuthState, AuthActions> = (
         access_token: null,
         user: null,
       };
+    case "setemail":
+      return {
+        ...state,
+        user: {
+          ...state.user!,
+          email: action.payload,
+        },
+      };
     case "setuser":
       return {
         ...state,

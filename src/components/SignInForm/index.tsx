@@ -57,12 +57,12 @@ const SignInForm = () => {
       <p>Sign in</p>
       <form onSubmit={signIn} className="flex flex-col gap-3">
         <div className="flex flex-col gap-1">
-          <label htmlFor="username">Username</label>
+          <label htmlFor="sign-in-username">Username</label>
           <input
             className="border-2 p-2"
             type="text"
-            id="username"
-            name="username"
+            id="sign-in-username"
+            name="sign-in-username"
             value={username}
             onChange={(e) => {
               setUsername(e.target.value);
@@ -70,11 +70,11 @@ const SignInForm = () => {
           />
         </div>
         <div className="flex flex-col gap-1">
-          <label htmlFor="password">Username</label>
+          <label htmlFor="sign-in-password">Password</label>
           <input
             className="border-2 p-2"
-            type="password"
-            id="password"
+            type="sign-in-password"
+            id="sign-in-password"
             name="password"
             value={password}
             onChange={(e) => {

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
 import SignInForm from "./components/SignInForm";
 import SignUpForm from "./components/SignUpForm";
+import Authenticated from "./components/Authenticated";
 
 function App() {
   let auth = useContext(AuthContext);
@@ -10,10 +11,7 @@ function App() {
   return (
     <div>
       {auth.user ? (
-        <div>
-          <p>{auth.access_token}</p>
-          <p>{auth.user?.email}</p>
-        </div>
+        <Authenticated />
       ) : (
         <div className="flex flex-row gap-10 p-5">
           <SignInForm />

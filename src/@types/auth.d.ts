@@ -16,6 +16,11 @@ type AuthSignIn = {
   };
 };
 
+type AuthSetEmail = {
+  type: "setemail";
+  payload: string;
+};
+
 type AuthSetUser = {
   type: "setuser";
   payload: User | null;
@@ -26,4 +31,4 @@ type AuthSignOut = {
   payload: null;
 };
 
-type AuthActions = AuthSetUser | AuthSignIn | AuthSignOut;
+type AuthActions = AuthSetEmail | AuthSetUser | AuthSignIn | AuthSignOut;
